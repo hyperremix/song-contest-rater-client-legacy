@@ -1,0 +1,42 @@
+.navbar-nav {
+  margin: 0px;
+}
+
+.navbar-brand > img {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-brand {
+  margin-top: -2px;
+}
+
+span.glyphicon {
+  font-size: 1.3em;
+}
+
+.navbar-static-top {
+  margin-bottom: 0px;
+}
+
+.navbar-title {
+  min-height: 32px;
+}
+
+.well-sscr > h3 {
+  margin: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar-brand {
+    margin-top: -3px;
+  }
+
+  .navbar-nav > li {
+    width: 24%;
+  }
+
+  .container {
+    margin-top: 5px;
+  }
+}

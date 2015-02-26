@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default navbar-title">
+  <div class="container">
+    <label>Scoreboard</label>
+  </div>
+</nav>
+<div class="container">
+  {{#each}}
+    <div class="row">
+      <div class="col-xs-2 col-md-1 center-x">
+        <label>{{startNumber}}</label>
+      </div>
+      <div class="col-xs-9 col-md-5 well well-sm well-sscr">
+        <p>{{name}}</p>
+      </div>
+    </div>
+  {{/each}}
+</div>

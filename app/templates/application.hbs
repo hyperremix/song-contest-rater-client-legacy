@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div>
+      <ul class="nav navbar-nav nav-pills">
+        <li>
+          {{#link-to 'index' classNames="navbar-brand"}}<img alt="Brand" src="/assets/images/melodifestivalen_symbol.png">{{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'artists'}}<span class="glyphicon glyphicon-star"></span>{{/link-to}}
+        </li>
+        <!--<li>
+          {{#link-to 'Raters' 'raters'}}<span class="glyphicon glyphicon-pencil"></span>{{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'Help' 'help'}}<span class="glyphicon glyphicon-book"></span>{{/link-to}}
+        </li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{{outlet}}
