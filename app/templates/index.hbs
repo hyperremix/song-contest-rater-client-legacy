@@ -4,11 +4,11 @@
   </div>
 </nav>
 <div class="container-fluid">
-  {{#each artist in this}}
+  {{#each artist in controller}}
     <div class="row well well-sm well-sscr">
       <div class="row">
         <div class="col-xs-2 col-md-1">
-          <label>{{artist.startNumber}}</label>
+          <label>{{_view.contentIndex}}</label>
         </div>
         <div class="col-xs-9 col-md-5 col-sscr">
           <label>{{artist.name}} - {{artist.songName}}</label>
