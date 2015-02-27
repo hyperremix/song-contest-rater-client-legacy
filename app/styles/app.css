@@ -23,8 +23,20 @@ span.glyphicon {
   min-height: 32px;
 }
 
-.well-sscr > h3 {
+.well-sscr {
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 5px;
+}
+
+.well-points {
   margin: 0px;
+  padding: 3px;
+}
+
+.col-sscr {
+  padding-right: 0px;
+  border-left: 1px solid #ccc;
 }
 
 @media screen and (max-width: 800px) {
