@@ -3,17 +3,10 @@
     <label>Artists</label>
   </div>
 </nav>
-<div class="container-fluid">
+<div class="container">
   {{#each artist in controller}}
     <div class="row well well-sm well-sscr">
-      <div class="row">
-        <div class="col-xs-2 col-md-1">
-          <label>{{artist.startNumber}}</label>
-        </div>
-        <div class="col-xs-9 col-md-5 col-sscr">
-          <label>{{artist.name}} - {{artist.songName}}</label>
-        </div>
-      </div>
+      {{#link-to 'artists.view' artist}}<label>{{artist.startNumber}}. {{artist.name}} - {{artist.songName}}</label>{{/link-to}}
     </div>
   {{/each}}
 </div>

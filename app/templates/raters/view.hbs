@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default navbar-title">
+  <div class="container">
+    <label>{{name}}</label>
+  </div>
+</nav>
+<div class="container">
+  {{#each rating in ratings}}
+  <div class="row well well-sm well-sscr">
+    <div class="row">
+      <div class="col-xs-2 col-md-1">
+        <label>{{rating-summer rating}}</label>
+      </div>
+      <div class="col-xs-9 col-md-5 col-sscr">
+        <label>{{rating.artist.startNumber}}. {{rating.artist.name}} - {{rating.artist.songName}}</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2 col-md-1">
+      </div>
+      <div class="col-xs-9 col-md-10 col-sscr">
+        <div class="row well well-sm well-points pull-right">
+          Show: <br>
+          {{rating.show}} Points
+        </div>
+        <div class="row well well-sm well-points pull-right">
+          Singing: <br>
+          {{rating.singing}} Points
+        </div>
+        <div class="row well well-sm well-points pull-right">
+          Song: <br>
+          {{rating.song}} Points
+        </div>
+        <div class="row well well-sm well-points pull-right">
+          Clothes: <br>
+          {{rating.clothes}} Points
+        </div>
+        <div class="row well well-sm well-points pull-right">
+          Looks: <br>
+          {{rating.looks}} Points
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

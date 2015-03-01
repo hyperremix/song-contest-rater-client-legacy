@@ -31,12 +31,46 @@ span.glyphicon {
 
 .well-points {
   margin: 0px;
+  margin-left: 2px;
+  margin-bottom: 2px;
   padding: 3px;
 }
 
 .col-sscr {
   padding-right: 0px;
   border-left: 1px solid #ccc;
+}
+
+.row-help {
+  border-top: 1px solid #ccc;
+}
+
+.col-help {
+  margin-top: 5px;
+}
+
+.row > .container {
+  width: 100%
+}
+
+/* unvisited link */
+a:link {
+  color: #000000;
+}
+
+/* visited link */
+a:visited {
+  color: #000000;
+}
+
+/* mouse over link */
+a:hover {
+  color: #000000;
+}
+
+/* selected link */
+a:active {
+  color: #000000;
 }
 
 @media screen and (max-width: 800px) {
@@ -46,6 +80,11 @@ span.glyphicon {
 
   .navbar-nav > li {
     width: 24%;
+  }
+
+  .col-help {
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   .container {

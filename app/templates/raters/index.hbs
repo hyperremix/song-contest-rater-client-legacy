@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default navbar-title">
+  <div class="container">
+    <label>Raters</label>
+  </div>
+</nav>
+<div class="container">
+  {{#each rater in model}}
+  <div class="row well well-sm well-sscr">
+    {{#link-to 'raters.view' rater}}<label>{{rater.name}}</label>{{/link-to}}
+  </div>
+  {{/each}}
+</div>

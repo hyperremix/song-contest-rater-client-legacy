@@ -6,7 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('artists', function(){});
+  this.resource('artists', function(){
+    this.route('view', { path: "/:_id" });
+  });
+  this.resource('raters', function(){
+    this.route('view', { path: "/:_id" });
+  });
+  this.resource('help', function(){});
 });
 
 export default Router;

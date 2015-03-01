@@ -3,21 +3,21 @@
     <label>Scoreboard</label>
   </div>
 </nav>
-<div class="container-fluid">
+<div class="container">
   {{#each artist in controller}}
-    <div class="row well well-sm well-sscr">
+  <div class="row well well-sm well-sscr">
       <div class="row">
         <div class="col-xs-2 col-md-1">
-          <label>{{_view.contentIndex}}</label>
+          <label>{{increment-index _view.contentIndex}}.</label>
         </div>
         <div class="col-xs-9 col-md-5 col-sscr">
-          <label>{{artist.name}} - {{artist.songName}}</label>
+          {{#link-to 'artists.view' artist}}<label>{{artist.startNumber}}. {{artist.name}} - {{artist.songName}}</label>{{/link-to}}
         </div>
       </div>
       <div class="row">
         <div class="col-xs-2 col-md-1">
         </div>
-        <div class="col-xs-9 col-md-5 col-sscr">
+        <div class="col-xs-9 col-md-10 col-sscr">
           <div class="row well well-sm well-points pull-right">
             {{artist.totalRating}} Points
           </div>
