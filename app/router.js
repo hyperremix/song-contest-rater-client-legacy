@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('view', { path: "/:_id" });
   });
   this.resource('help', function(){});
+  this.resource('login', function(){});
 });
 
 export default Router;

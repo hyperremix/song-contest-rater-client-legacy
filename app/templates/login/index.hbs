@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-title">
+  <div class="container">
+    <label>Artists</label>
+  </div>
+</nav>
+<form {{action 'login' on='submit'}}>
+  <div class="container">
+    <div class="row well well-sm well-sscr">
+      <div class="container">
+        <div class="row">
+          <label for="identification">Login</label>
+          {{input id='identification' placeholder='Enter Login' value=identification}}
+        </div>
+        <div class="row">
+          <label for="password">Password</label>
+          {{input id='password' placeholder='Enter Password' type='password' value=password}}
+        </div>
+        <button type="submit">Login</button>
+      </div>
+    </div>
+  </div>
+</form>

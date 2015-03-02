@@ -14,6 +14,13 @@
         <li>
           {{#link-to 'help'}}<span class="glyphicon glyphicon-book"></span>{{/link-to}}
         </li>
+        <li>
+          {{#if session.isAuthenticated}}
+            <a {{ action 'invalidateSession' }}><span class="glyphicon glyphicon-log-out"></span></a>
+          {{else}}
+            {{#link-to 'login'}}<span class="glyphicon glyphicon-log-in"></span>{{/link-to}}
+          {{/if}}
+        </li>
       </ul>
     </div>
   </div>
