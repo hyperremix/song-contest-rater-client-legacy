@@ -1,34 +1,6 @@
 import Ember from 'ember';
+import LoginControllerMixin from 'simple-auth/mixins/login-controller-mixin';
 
-export default Ember.Controller.extend({
-  actions: {
-    login: function() {
-      var self = this;
-      var data = this.getProperties('identification', 'password');
-      if (!Ember.isEmpty(data.identification) && !Ember.isEmpty(data.password)) {
-        Ember.$.ajax({
-          url: 'http://localhost:3000/login',
-          type: 'GET',
-          headers: {
-            authorization: internals.header(data.identification, data.password)
-          },
-          dataType: 'jsonp',
-          success: function (response) {
-            console.log(response);
-            var rater = (response.rater || {});
-            Ember.Application.Session.setProperties({
-              raterId: rater._id
-            });
-            self.transitionTo('artists');
-          }
-        });
-      }
-    }
-  }
+export default Ember.Controller.extend(LoginControllerMixin, {
+  authenticator: 'simple-auth-authenticator:token'
 });
-
-var internals = {};
-
-internals.header = function (username, password) {
-  return 'Basic ' + btoa(username + ':' + password);
-};
