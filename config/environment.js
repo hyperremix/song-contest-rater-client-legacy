@@ -20,6 +20,7 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth'] = {
+    crossOriginWhitelist: ['http://localhost:3000'],
     authorizer: 'simple-auth-authorizer:token'
   };
   ENV['simple-auth-token'] = {
