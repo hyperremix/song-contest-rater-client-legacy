@@ -38,6 +38,5 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
 });
 
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
-app.import('bower_components/jquery.cookie/jquery.cookie.js');
 
 module.exports = app.toTree();

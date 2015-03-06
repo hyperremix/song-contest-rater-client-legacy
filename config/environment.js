@@ -19,17 +19,8 @@ module.exports = function(environment) {
     }
   };
 
-  ENV['simple-auth'] = {
-    crossOriginWhitelist: ['http://localhost:3000'],
-    authorizer: 'simple-auth-authorizer:token'
-  };
-  ENV['simple-auth-token'] = {
-    serverTokenEndpoint: 'http://localhost:3000/token',
-    identificationField: 'name',
-    passwordField: 'password'
-  };
-
   if (environment === 'development') {
+    ENV['apiUrl'] = 'http://localhost:3000'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -50,8 +41,19 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV['apiUrl'] = 'http://192.168.178.20:3000'
   }
+
+  ENV['simple-auth'] = {
+    crossOriginWhitelist: [ENV.apiUrl],
+    authorizer: 'simple-auth-authorizer:token'
+  };
+
+  ENV['simple-auth-token'] = {
+    serverTokenEndpoint: ENV.apiUrl + '/token',
+    identificationField: 'name',
+    passwordField: 'password'
+  };
 
   return ENV;
 };

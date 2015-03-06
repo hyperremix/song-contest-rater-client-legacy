@@ -1,22 +1,48 @@
 <nav class="navbar navbar-default navbar-title">
   <div class="container">
-    <label>Artists</label>
+    <label>Login/Register</label>
   </div>
 </nav>
-<form {{action 'authenticate' on='submit'}}>
-  <div class="container">
+
+<div class="container">
+  <form {{action 'authenticate' on='submit'}}>
     <div class="row well well-sm well-sscr">
       <div class="container">
         <div class="row">
-          <label for="identification">Login</label>
-          {{input id='identification' placeholder='Enter Login' value=identification}}
+          <h4>Login using an existing account</h4>
         </div>
-        <div class="row">
-          <label for="password">Password</label>
-          {{input id='password' placeholder='Enter Password' type='password' value=password}}
+        <div class="row input-row row-border-top">
+          {{input id='identification' placeholder='Enter Name' value=identification class="pull-right"}}
+          <label for="identification" class="pull-right">Name</label>
         </div>
-        <button type="submit">Login</button>
+        <div class="row input-row">
+          {{input id='password' placeholder='Enter Password' type='password' value=password class="pull-right"}}
+          <label for="password" class="pull-right">Password</label>
+        </div>
+        <button type="submit" class="pull-right btn-submit">Login</button>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+  <form {{action 'register' on='submit'}}>
+    <div class="row well well-sm well-sscr">
+      <div class="container">
+        <div class="row">
+          <h4>Don't have an account?<br>Create one!</h4>
+        </div>
+        <div class="row input-row row-border-top">
+          {{input id='regName' placeholder='Enter Name' value=regName class="pull-right"}}
+          <label for="identification" class="pull-right">Name</label>
+        </div>
+        <div class="row input-row">
+          {{input id='regPass' placeholder='Enter Password' type='password' value=regPass class="pull-right"}}
+          <label for="password" class="pull-right">Password</label>
+        </div>
+        <div class="row input-row">
+          {{input id='regPassConfirm' placeholder='Confirm Password' type='password' value=regPassConfirm class="pull-right"}}
+          <label for="password" class="pull-right">Confirm<br>Password</label>
+        </div>
+        <button type="submit" class="pull-right btn-submit">Register</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -4,6 +4,37 @@
   </div>
 </nav>
 <div class="container">
+  {{#if session.isAuthenticated}}
+    <form {{action 'rate' on='submit'}}>
+      {{input type="hidden" value=session.rater_id}}
+      {{input type="hidden" value=id}}
+      <div class="row well well-sm well-sscr">
+        <div class="container">
+          <div class="row input-row">
+            {{input id='song' placeholder='Enter Song Rating' value=song min=0 max=15 class="pull-right"}}
+            <label for="song" class="pull-right">Song</label>
+          </div>
+          <div class="row input-row">
+            {{input id='singing' placeholder='Enter Singin Rating' value=singing min=0 max=15 class="pull-right"}}
+            <label for="singing" class="pull-right">Singing</label>
+          </div>
+          <div class="row input-row">
+            {{input id='show' placeholder='Enter Show Rating' value=show min=0 max=15 class="pull-right"}}
+            <label for="show" class="pull-right">Show</label>
+          </div>
+          <div class="row input-row">
+            {{input id='clothes' placeholder='Enter Clothes Rating' value=clothes min=0 max=15 class="pull-right"}}
+            <label for="clothes" class="pull-right">Clothes</label>
+          </div>
+          <div class="row input-row">
+            {{input id='looks' placeholder='Enter Looks Rating' value=looks min=0 max=15 class="pull-right"}}
+            <label for="looks" class="pull-right">Looks</label>
+          </div>
+          <button type="submit" class="pull-right btn-submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  {{/if}}
   {{#each rating in ratings}}
   <div class="row well well-sm well-sscr">
     <div class="row">
@@ -41,5 +72,7 @@
       </div>
     </div>
   </div>
+  {{else}}
+    <label>This artist has no ratings yet :(</label>
   {{/each}}
 </div>
