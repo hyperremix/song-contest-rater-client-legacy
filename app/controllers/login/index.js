@@ -6,7 +6,7 @@ export default Ember.Controller.extend(LoginControllerMixin, {
   authenticator: 'simple-auth-authenticator:token',
   actions: {
     register: function() {
-      var name = this.get('regName')
+      var name = this.get('regName');
       var pass = this.get('regPass');
       var passConfirm = this.get('regPassConfirm');
 
