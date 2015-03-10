@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV['apiUrl'] = 'http://192.168.178.20:3000'
+    ENV['apiUrl'] = 'https://song-contest-rater-api.herokuapp.com'
   }
 
   ENV['simple-auth'] = {
