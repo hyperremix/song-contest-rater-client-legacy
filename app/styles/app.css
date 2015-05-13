@@ -86,6 +86,10 @@ a:active {
   margin-top: 10px;
 }
 
+.error {
+  color: red;
+}
+
 @media screen and (max-width: 800px) {
   .navbar-brand {
     margin-top: -3px;

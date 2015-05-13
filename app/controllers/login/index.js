@@ -22,6 +22,8 @@ export default Ember.Controller.extend(LoginControllerMixin, {
               password: pass
             }
           })
+        }).done(function() {
+          alert("Account created")
         });
       }
     }

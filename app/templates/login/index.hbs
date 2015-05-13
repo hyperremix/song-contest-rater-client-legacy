@@ -12,11 +12,11 @@
           <h4>Login using an existing account</h4>
         </div>
         <div class="row input-row row-border-top">
-          {{input id='identification' placeholder='Enter Name' value=identification class="pull-right"}}
+          {{input id='identification' placeholder='Enter Name' value=identification class='pull-right' required='required'}}
           <label for="identification" class="pull-right">Name</label>
         </div>
         <div class="row input-row">
-          {{input id='password' placeholder='Enter Password' type='password' value=password class="pull-right"}}
+          {{input id='password' placeholder='Enter Password' type='password' value=password class='pull-right' required='required'}}
           <label for="password" class="pull-right">Password</label>
         </div>
         <button type="submit" class="pull-right btn-submit">Login</button>
@@ -30,19 +30,38 @@
           <h4>Don't have an account?<br>Create one!</h4>
         </div>
         <div class="row input-row row-border-top">
-          {{input id='regName' placeholder='Enter Name' value=regName class="pull-right"}}
+          {{input id='regName' placeholder='Enter Name' value=regName  class='pull-right' required='required'}}
           <label for="identification" class="pull-right">Name</label>
         </div>
         <div class="row input-row">
-          {{input id='regPass' placeholder='Enter Password' type='password' value=regPass class="pull-right"}}
+          {{input id='regPass' placeholder='Enter Password' type='password' value=regPass  class='pull-right' required='required'}}
           <label for="password" class="pull-right">Password</label>
         </div>
         <div class="row input-row">
-          {{input id='regPassConfirm' placeholder='Confirm Password' type='password' value=regPassConfirm class="pull-right"}}
+          {{input id='regPassConfirm' placeholder='Confirm Password' type='password' value=regPassConfirm  class='pull-right' required='required'}}
           <label for="password" class="pull-right">Confirm<br>Password</label>
+        </div>
+        <div class="row">
+          <label id="confirm-pass-error" class="pull-right error"></label>
         </div>
         <button type="submit" class="pull-right btn-submit">Register</button>
       </div>
     </div>
   </form>
 </div>
+
+<script>
+function displayError() {
+  var regPass = $("#regPass").val();
+  var regPassConfirm = $("#regPassConfirm").val();
+
+  if (regPass === regPassConfirm) {
+    $("#confirm-pass-error").html("");
+  } else if (regPass && regPassConfirm){
+    $("#confirm-pass-error").html("Password does not match the confirm password.");
+  }
+}
+
+$("#regPassConfirm").change(displayError);
+$("#regPass").change(displayError);
+</script>
