@@ -23,7 +23,7 @@ export default Ember.Controller.extend(LoginControllerMixin, {
             }
           })
         }).done(function() {
-          alert("Account created")
+          alert("Account created");
         });
       }
     }
